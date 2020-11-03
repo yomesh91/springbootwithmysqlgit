@@ -20,6 +20,11 @@ public class ProductController {
         return productService.listAll();
     }
 
+    @GetMapping("/items")
+    public List<Product> items() {
+        return productService.listAll();
+    }
+
     @PostMapping("/products")
     public void add(@RequestBody Product product) {
         productService.save(product);
